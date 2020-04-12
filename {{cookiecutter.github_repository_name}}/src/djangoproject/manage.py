@@ -5,7 +5,7 @@ import sys
 
 
 def main():
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "{{ cookiecutter.app_name }}.config")
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "django_project.config")
     os.environ.setdefault("DJANGO_CONFIGURATION", "Local")
 
     try:

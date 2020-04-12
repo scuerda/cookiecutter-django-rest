@@ -23,7 +23,8 @@ class Common(Configuration):
         'django_filters',            # for filtering rest endpoints
 
         # Your apps
-        '{{cookiecutter.app_name}}.users',
+        'djangoproject.users',
+        'djangoproject.{{cookiecutter.app_shortname}}',
 
     )
 
@@ -39,9 +40,9 @@ class Common(Configuration):
     )
 
     ALLOWED_HOSTS = ["*"]
-    ROOT_URLCONF = '{{ cookiecutter.app_name }}.urls'
+    ROOT_URLCONF = 'djangoproject.urls'
     SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
-    WSGI_APPLICATION = '{{ cookiecutter.app_name }}.wsgi.application'
+    WSGI_APPLICATION = 'djangoproject.wsgi.application'
 
     # Email
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
