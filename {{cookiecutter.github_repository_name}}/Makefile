@@ -5,7 +5,7 @@ up:
 	docker-compose up -d
 
 test: up
-	docker-compose run --rm --no-deps --entrypoint=pytest
+	docker-compose run --rm web pytest
 
 logs:
 	docker-compose logs --tail=25 api redis_pubsub
